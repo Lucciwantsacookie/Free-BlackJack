@@ -11,4 +11,4 @@ with open("daten_manager.json") as f:
     daten = json.load(f)
     
 
-
+print(daten["n"])
