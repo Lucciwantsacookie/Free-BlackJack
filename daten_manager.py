@@ -10,23 +10,7 @@ player_cards = []
 bot_cards = []
 
 
-daten = {
-    "n": n,
-       "cards": cards,
-               "used_cards": used_cards,
-               "player_cards": player_cards,
-               "bot_cards": bot_cards
-
-    }
-
-
-with open("daten_manager.json", "w") as f:
-    json.dump(daten, f)
-
-
-
-
-def Game_Logik_Daten():
+def Start_Logik_Daten():
     for i in range(2):
         player_cards.append(random.randint(1, 11))
         #bot_cards.append(random.randint(1, 11))                 
@@ -41,3 +25,19 @@ def Game_Logik_Daten():
     print("Bot Cards: ", bot_cards)
     print("Used Cards: ", used_cards)
     print("Cards: ", cards)
+    return True
+
+
+
+daten = {
+    "n": n,
+       "cards": cards,
+               "used_cards": used_cards,
+               "player_cards": player_cards,
+               "bot_cards": bot_cards
+
+    }
+
+
+with open("daten_manager.json", "w") as f:
+    json.dump(daten, f)
